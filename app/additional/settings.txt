@@ -16,3 +16,16 @@ php artisan make:migration create_posts_table
 php artisan make:migration create_tags_table
 php artisan make:migration create_comments_table
 php artisan make:migration create_post_tag_table
+
+
+echo "# react-laravel-blog" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:adved85/react-laravel-blog.git
+git push -u origin main
+
+
+adved_id_rsa
+adved_id_rsa.pub

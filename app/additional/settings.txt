@@ -1,0 +1,18 @@
+laravel new react-laravel-blog
+
+-- on homestead --
+    DB_DATABASE=react_laravel_blog
+    DB_USERNAME=homestead
+    DB_PASSWORD=secret
+
+tables
+    Categories
+    Posts
+    Comments
+    Tags
+
+php artisan make:migration create_categories_table
+php artisan make:migration create_posts_table
+php artisan make:migration create_tags_table
+php artisan make:migration create_comments_table
+php artisan make:migration create_post_tag_table

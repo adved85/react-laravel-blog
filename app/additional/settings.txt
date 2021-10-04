@@ -29,3 +29,26 @@ git push -u origin main
 
 adved_id_rsa
 adved_id_rsa.pub
+
+https://www.freecodecamp.org/news/git-ssh-how-to/
+-by gitbash
+$ eval "$(ssh-agent -s)"
+$ ssh-add ~/.ssh/adved_id_rsa
+- nad pull or push
+====================
+
+setting up next relation on Comments
+Comments and Posts have "date_formatted" attribute formatted by Carbon
+date localization
+https://stackoverflow.com/questions/48463083/laravel-how-to-localize-dates-within-views-with-carbon
+https://carbon.nesbot.com/docs/#api-localization
+also PHP has setlocale() function,
+to set locale information.
+https://www.php.net/manual/en/function.setlocale
+
+
+see Laravel Factory States
+https://laravel.com/docs/8.x/database-testing#factory-states
+google search
+    how to use factory states in laravel
+https://stevensteel.com/blog/laravel8-factories-states

@@ -10,6 +10,11 @@ class Category extends Model
 {
     use HasFactory;
 
+    /**
+     * get all posts of category
+     *
+     * @return HasMany
+     */
     public function posts(): HasMany
     {
         return $this->hasMany(Post::class, 'category_id', 'id');

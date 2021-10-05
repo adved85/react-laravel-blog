@@ -18,6 +18,6 @@ class UserSeeder extends Seeder
         User::factory()->count(1)->state([
             'name' => 'daddy',
             'email' => 'daddy@gmail.com',
-        ])->isAdmin()->create();
+        ])->isAdmin(1)->create();
     }
 }

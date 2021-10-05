@@ -52,3 +52,11 @@ https://laravel.com/docs/8.x/database-testing#factory-states
 google search
     how to use factory states in laravel
 https://stevensteel.com/blog/laravel8-factories-states
+
+
+-- only seed
+php artisan db:seed
+-- only migration
+php artisan migrate:refresh
+-- migration & seed
+php artisan migrate:refresh --seed

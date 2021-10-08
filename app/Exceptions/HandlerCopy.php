@@ -5,10 +5,6 @@ namespace App\Exceptions;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
 
-use Illuminate\Auth\AuthenticationException;
-
-use function PHPUnit\Framework\returnSelf;
-
 class Handler extends ExceptionHandler
 {
     /**
@@ -38,17 +34,8 @@ class Handler extends ExceptionHandler
      */
     public function register()
     {
-        $this->renderable( function(Throwable $e, $request) {
-            return $this->handleAuthenticationException($e, $request);
+        $this->reportable(function (Throwable $e) {
+            //
         });
-    }
-
-
-    public function handleAuthenticationException(AuthenticationException $e, $request)
-    {
-        if($request->expectsJson()) {
-            return response()->json(['state' => 0, 'message' => 'Unauthenticated. Exception Handler'], 401);
-        }
-        return redirect()->guest(route('auth.login'));
     }
 }

@@ -2,13 +2,9 @@
 
 namespace App\Exceptions;
 
-use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
-
+use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Auth\AuthenticationException;
-
-use function PHPUnit\Framework\returnSelf;
-
 class Handler extends ExceptionHandler
 {
     /**

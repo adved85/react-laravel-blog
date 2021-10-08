@@ -60,3 +60,26 @@ php artisan db:seed
 php artisan migrate:refresh
 -- migration & seed
 php artisan migrate:refresh --seed
+
+
+==================================
+====== Token authentication ======
+!!! https://laravel.com/docs/6.x/api-authentication
+Start from Laravel6, this part removed from documentation.
+
+
+    we need to change this files.
+        1) app/Exceptions/Handler.php
+        this file does not changed from 5.8 to 7 version, changed on 8.
+        removed report(Exception $exception) and render($request, Exception $exception)
+        added register()
+
+        Rendering Exceptions
+            https://stackoverflow.com/questions/64177220/how-to-register-custom-exception-handler-in-laravel-8
+            https://laravel.com/docs/8.x/errors#the-exception-handler
+
+        2) app\Http\Middleware\Authenticate.php
+        added else
+
+
+
